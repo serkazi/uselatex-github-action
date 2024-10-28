@@ -1,0 +1,14 @@
+name: 'uselatex-github-action'
+description: 'Build LaTeX document using CMake'
+branding:
+  icon: alert-triangle
+  color: orange
+inputs:
+  path:
+    description: 'Directory with CMakeLists.txt'
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+      'docker://makeappdev/uselatex:latest'
